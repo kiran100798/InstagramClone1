@@ -62,14 +62,36 @@
         app:layout_constraintTop_toBottomOf="@+id/college_editTextId" />
 
     <TextView
-        android:id="@+id/exceptionTextViewId"
+        android:id="@+id/getDataTextViewId"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="44dp"
         android:layout_marginEnd="32dp"
-        android:text=""
+        android:text="Data from server loading..."
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/addButtonId" />
+
+    <Button
+        android:id="@+id/getAllDataBtnId"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:text="Get all data"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/getDataTextViewId" />
+
+    <TextView
+        android:id="@+id/allDataTextId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/getAllDataBtnId" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -49,7 +49,6 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
                 @Override
                 public void done(ParseException e) {
                     if( e == null ) {
-                        
 //                        Toast.makeText(SignUp.this, "object is saved successfully", Toast.LENGTH_SHORT).show();
                         FancyToast.makeText(SignUp.this,student.get("name") + " is added",FancyToast.LENGTH_LONG, FancyToast.SUCCESS,true).show();
                         exception_textView.setText("Success");

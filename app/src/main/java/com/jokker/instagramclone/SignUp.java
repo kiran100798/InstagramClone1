@@ -23,7 +23,7 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
 
     private EditText name_editText, age_editText, college_editText;
     private TextView txtGetData, allDataText;
-    private Button addToDbButton, getAllDataButton;
+    private Button addToDbButton, getAllDataButton, btnTransition;
     String allData;
 
     @Override
@@ -38,6 +38,9 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
         getAllDataButton = findViewById(R.id.getAllDataBtnId);
         txtGetData = findViewById(R.id.getDataTextViewId);
         allDataText = findViewById(R.id.allDataTextId);
+
+        btnTransition = findViewById(R.id.btnNewActivityId);
+
         txtGetData.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -63,6 +66,9 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
                 allData = "" ;
 
                 ParseQuery<ParseObject> queryAll = ParseQuery.getQuery("Kiran");
+                queryAll.whereGreaterThan("age", 22);
+                queryAll.whereEqualTo("college", "uvce");
+//                queryAll.setLimit(1);
                 queryAll.findInBackground(new FindCallback<ParseObject>() {
                     @Override
                     public void done(List<ParseObject> objects, ParseException e) {
@@ -83,10 +89,19 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
             }
         });
 
+        btnTransition.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
         addToDbButton = findViewById(R.id.addButtonId);
         addToDbButton.setOnClickListener(SignUp.this);
 
     }
+
+
 
     @Override
     public void onClick(View v) {

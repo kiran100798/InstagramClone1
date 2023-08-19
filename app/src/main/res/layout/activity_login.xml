@@ -4,14 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#42C6AC"
-    android:onClick="rootLayoutTapped"
-    tools:context=".SignUp">
+    android:background="#B5A643"
+    tools:context=".LoginActivity">
 
     <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="146dp"
-        android:layout_height="119dp"
+        android:id="@+id/imageView"
+        android:layout_width="135dp"
+        android:layout_height="120dp"
         android:layout_marginTop="32dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -19,10 +18,10 @@
         app:srcCompat="@mipmap/instagram_icon" />
 
     <EditText
-        android:id="@+id/emailSignUpId"
+        android:id="@+id/emailLoginId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="64dp"
         android:ems="10"
         android:hint="email..."
         android:inputType="text"
@@ -30,61 +29,47 @@
         android:textColorHint="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <EditText
-        android:id="@+id/usernameSignUpId"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:ems="10"
-        android:hint="username..."
-        android:inputType="text"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/emailSignUpId" />
-
-    <EditText
-        android:id="@+id/passwordSignUpId"
+        android:id="@+id/passwordLoginId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:ems="10"
         android:hint="password..."
-        android:inputType="textPassword"
+        android:inputType="text"
         android:textColor="@color/white"
         android:textColorHint="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/usernameSignUpId" />
+        app:layout_constraintTop_toBottomOf="@+id/emailLoginId" />
 
     <Button
-        android:id="@+id/signUpInSignUpId"
+        android:id="@+id/loginInLogInId"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="16dp"
-        android:background="#5583D5"
-        android:text="Sign Up"
-        app:backgroundTint="@null"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/passwordSignUpId" />
-
-    <Button
-        android:id="@+id/loginInSignupId"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="16dp"
-        android:background="#BFB44C"
+        android:background="#30C1C1"
         android:text="Log In"
         app:backgroundTint="@null"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signUpInSignUpId" />
+        app:layout_constraintTop_toBottomOf="@+id/passwordLoginId" />
+
+    <Button
+        android:id="@+id/signUpInLogInId"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:background="#892DD8"
+        android:text="Sign Up"
+        app:backgroundTint="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginInLogInId" />
 </androidx.constraintlayout.widget.ConstraintLayout>
